@@ -186,7 +186,7 @@ body {
   #header #logo img {
     padding: 0;
     margin: 0;
-    max-height: 40px;
+    max-height: 60px;
   }
   
   /*--------------------------------------------------------------
@@ -1077,6 +1077,7 @@ body {
   .modal-body img {
     width: 100%;
     border-radius: 10px;
+    border: 1px solid red;
   }
   
   /*--------------------------------------------------------------
@@ -1889,7 +1890,7 @@ body {
   
   .btn {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #e7a840;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -1971,7 +1972,7 @@ body {
   }
   
   .btn {
-    background-color: #007bff; /* Change to your preferred color */
+    background-color: #e7a840; /* Change to your preferred color */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
