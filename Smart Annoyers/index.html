@@ -482,22 +482,22 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                    placeholder="Your Email" data-rule="email" data-msg="Please Enter a Valid Email" />
                                 <div class="validation"></div>
                             </div>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" name="phonenumber" id="phonenumber"
-                                placeholder="Mobile Number" />
+                            data-rule="required"
+                            data-msg="Please Enter Mobile Number" placeholder="Mobile Number" />
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="message" id="message" rows="5" data-rule="required"
-                                data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"></textarea>
                             <div class="validation"></div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" onclick="sendmail('form1')">
+                            <button type="submit"  id="mainButton" onclick="sendmail('form1')">
                                 Send Message
                             </button>
                         </div>
@@ -538,7 +538,7 @@
                             <textarea class="form-control" id="message1" rows="4" name="message"
                                 placeholder="Your message..." required></textarea>
 
-                            <button type="submit" class="btn btn-primary mt-3" onclick="sendmail('form2')">
+                            <button type="submit" class="btn btn-primary mt-3"  onclick="sendmail('form2')">
                                 Send Message
                             </button>
                         </form>
@@ -546,8 +546,13 @@
                 </div>
             </div>
         </div>
-    </main>
 
+        <div id="popup">
+            <div>Email sent successfully
+              <span class="tick">✔</span>
+            </div>
+          </div>
+    </main>
     <!--==========================
     Footer
   ============================-->
@@ -636,7 +641,22 @@
     </footer>
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-
+<!-- <script>
+        // Get references to the main button and popup
+        const mainButton = document.getElementById('mainButton');
+        const popup = document.getElementById('popup');
+    
+        // Event listener for the main button
+        mainButton.addEventListener('click', function() {
+          // Show the popup
+          popup.style.display = 'block';
+    
+          // After 10 seconds, hide the popup
+          setTimeout(function() {
+            popup.style.display = 'none';
+          }, 5000); // 10 seconds delay
+        });
+      </script> -->
     <!-- JavaScript Libraries -->
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
